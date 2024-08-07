@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+
+    <header class="header">
+      <img class="logo" src="./assets/Logo.png" alt="Logo alura" />
+    </header>
+
+    <main class="main">
+
+      <section class="section1">
+            <textarea
+            id="user-input"
+            placeholder="Ingrese el texto aqui"
+            maxlength="500"
+            class="textArea"
+            ></textarea>
+
+        <div class="div2">
+            <div class="information">
+                <img
+                    class="signo"
+                    src="./assets/bi_exclamation-circle-fill.png"
+                    alt="logo de exclamacion"
+                />
+                <p class="parrafo1">Solo letras minusculas y sin acentos</p>
+            </div>
+
+          <div class="botones">
+            <button class="btn boton1" onclick="btnBoton1()">Encriptar</button>
+            <button class="btn boton2" onclick="btnBoton2()">Desencriptar</button>
+          </div>
+
+        </div>
+      </div>
+      </section>    
+
+      <section class="section2">
+        <div class="wrapperMessages">
+            <figure class="figure">
+           
+            </figure>
+
+            <div class="div_parrafo">
+              <textarea  class="mensajes"cols="20"rows="10"></textarea>
+                <h1 id="ng" class="desencriptar_mensaje">Ningún mensaje fue encontrado</h1>
+                <p id="ig" class="desencriptar_mensaje_parrafo">
+                Ingresa el texto que desees encriptar o desencriptar
+                </p>
+            </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>Desarrollado por Julian Hernandez</p>
+    </footer>
+  <script src="lalo.js"></script>
+  </body>
+
+</html>
+ <!-- <img
+                class="img"
+                src="./assets/Muñeco.png"
+                alt="Muñeco de alura"
+            />-->
