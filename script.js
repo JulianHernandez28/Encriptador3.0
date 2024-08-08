@@ -70,7 +70,7 @@ function validarTexto(texto) {
         const mensajesTextArea = document.querySelector('.mensajes');
         mensajesTextArea.select(); 
         try {
-            const exitoso = document.execCommand("copiar");
+            const exitoso = document.execCommand("copy");
             if (exitoso) {
                 alert("Texto copiado al portapapeles!");
             } else {
