@@ -44,16 +44,19 @@
 
       <section class="section2">
         <div class="wrapperMessages">
-            <figure class="figure">
-           
-            </figure>
+
 
             <div class="div_parrafo">
-              <textarea  class="mensajes"cols="20"rows="10"></textarea>
+              <textarea  
+                  class="mensajes" 
+                  cols="20"rows="10"
+                  maxlength="500"
+                  ></textarea>
                 <h1 id="ng" class="desencriptar_mensaje">Ningún mensaje fue encontrado</h1>
                 <p id="ig" class="desencriptar_mensaje_parrafo">
                 Ingresa el texto que desees encriptar o desencriptar
                 </p>
+                <button class="btn copiar"onclick="copiarTexto()">Copiar</button>
             </div>
         </div>
       </section>
@@ -63,7 +66,7 @@
     <footer class="footer">
       <p>Desarrollado por Julian Hernandez</p>
     </footer>
-  <script src="lalo.js"></script>
+  <script src="script.js"></script>
   </body>
 
 </html>

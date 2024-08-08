@@ -1,5 +1,5 @@
 const textArea = document.querySelector(".textArea");
-const mensajes = document.querySelector(".mensajes")
+const mensajes = document.querySelector(".mensajes");
 
 //*La letra "e" es convertida para "enter"
 //*La letra "i" es convertida para "imes"
@@ -7,44 +7,76 @@ const mensajes = document.querySelector(".mensajes")
 //*La letra "o" es convertida para "ober"
 //*La letra "u" es convertida para "ufat"
 
-function btnBoton1(){
-    const textoEncriptado = encriptar(textArea.value)
-    mensajes.value = textoEncriptado
-    textArea.value = ""
-    mensajes.style.backgroundImage = "none"
-    divParrafo.style.display = "none"
-    
+function btnBoton1() {
+    if (validarTexto(textArea.value)) {
+        const textoEncriptado = encriptar(textArea.value);
+        mensajes.value = textoEncriptado;
+        textArea.value = "";
+        mensajes.style.backgroundImage = "none";
+        ig.style.display = "none"
+        ng.style.display = "none"
+    }
 }
 
-function encriptar(stringEncriptada){
-    let matrizCodigo = [["e", "enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
-    stringEncriptada = stringEncriptada.toLowerCase()
+function encriptar(stringEncriptada) {
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase();
 
-    for(let i = 0; i < matrizCodigo.length; i++){
-        if(stringEncriptada.includes(matrizCodigo[i][0])){
-        stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1])
+    for (let i = 0; i < matrizCodigo.length; i++) {
+        if (stringEncriptada.includes(matrizCodigo[i][0])) {
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
         }
-
-}
-    return stringEncriptada
-}
- 
-function btnBoton2(){
-    const textoEncriptado = desencriptar(textArea.value)
-    mensajes.value = textoEncriptado
-    textArea.value = ""
-    
+    }
+    return stringEncriptada;
 }
 
-function desencriptar(stringDesencriptada){
-    let matrizCodigo = [["e", "enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
-    stringDesencriptada = stringDesencriptada.toLowerCase()
+function btnBoton2() {
+    if (validarTexto(textArea.value)) {
+        const textoEncriptado = desencriptar(textArea.value);
+        mensajes.value = textoEncriptado;
+        textArea.value = "";
+        mensajes.style.backgroundImage = "none";
+        ig.style.display = "none"
+        ng.style.display = "none"
+        
+    }
+}
 
-    for(let i = 0; i < matrizCodigo.length; i++){
-        if(stringDesencriptada.includes(matrizCodigo[i][1])){
-        stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1],matrizCodigo[i][0])
+function desencriptar(stringDesencriptada) {
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringDesencriptada = stringDesencriptada.toLowerCase();
+
+    for (let i = 0; i < matrizCodigo.length; i++) {
+        if (stringDesencriptada.includes(matrizCodigo[i][1])) {
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
         }
+    }
+    return stringDesencriptada;
+}
 
+function validarTexto(texto) {
+    const tieneMayusculas = /[A-Z]/.test(texto);
+    const tieneAcentos = /[áéíóúÁÉÍÓÚ]/.test(texto);
+    
+    if (tieneMayusculas || tieneAcentos) {
+        alert("Por favor, ingrese solo letras minúsculas y sin acentos.");
+        return false;
+    }
+    
+    return true;
 }
-    return stringDesencriptada
-}
+
+    function copiarTexto() {
+        const mensajesTextArea = document.querySelector('.mensajes');
+        mensajesTextArea.select(); 
+        try {
+            const exitoso = document.execCommand("copiar");
+            if (exitoso) {
+                alert("Texto copiado al portapapeles!");
+            } else {
+                alert("No se pudo copiar el texto.");
+            }
+        } catch (mistake) {
+            alert("Error al copiar el texto: ", mistake);
+        }
+    }
