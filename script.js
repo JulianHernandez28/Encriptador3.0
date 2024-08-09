@@ -57,8 +57,9 @@ function desencriptar(stringDesencriptada) {
 function validarTexto(texto) {
     const tieneMayusculas = /[A-Z]/.test(texto);
     const tieneAcentos = /[áéíóúÁÉÍÓÚ]/.test(texto);
-    
-    if (tieneMayusculas || tieneAcentos) {
+    const tieneNumeros = /[0-9]/.test(texto);
+    const tieneCaracteresE = /[!@#$%^&*(),.?":{}|<>]/.test(texto)
+    if (tieneMayusculas || tieneAcentos || tieneNumeros || tieneCaracteresE) {
         alert("Por favor, ingrese solo letras minúsculas y sin acentos.");
         return false;
     }
