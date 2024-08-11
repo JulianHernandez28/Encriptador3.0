@@ -42,6 +42,7 @@ body {
 
 .section1 {
   /* border: 1px solid red; */
+  
 }
 
 .textArea {
@@ -54,6 +55,9 @@ body {
   border-radius: 0.5rem;
   border: none;
   box-shadow: 0 0 3px 1px #00000020;
+  overflow: auto;
+  flex-grow: 1;
+  max-width: 100%;
 }
 textarea::placeholder {
   color: var(--color--azul);
@@ -71,7 +75,8 @@ textarea::placeholder {
 .section2 {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; 
+  flex-grow: 1;
+  
 }
 .mensajes{
   width: 100%;
@@ -86,7 +91,9 @@ textarea::placeholder {
   border-radius: 0.5rem;
   border: none;
   box-shadow: 0 0 3px 1px #00000020;
- 
+  overflow: auto;
+  word-break: break-word;
+
 }
 .information {
   display: flex;
