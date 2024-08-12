@@ -80,7 +80,7 @@ textarea::placeholder {
 }
 .mensajes{
   width: 100%;
-  height: 34ch;
+  height: 32ch;
   background-color: transparent;
   background-image: url(./assets/Muñeco.png); 
   background-position: center;  
@@ -109,6 +109,8 @@ textarea::placeholder {
 .copiar{
   background-color: var(--color--gris-oscuro);
   color: var(--color--blanco);
+  margin-block-end: 1rem;
+  margin-block-start: 1rem;
 }
 
 .copiar:hover{
