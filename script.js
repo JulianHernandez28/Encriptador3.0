@@ -43,7 +43,7 @@ function validarTexto(texto) {
     const tieneMayusculas = /[A-Z]/.test(texto);
     const tieneAcentos = /[áéíóúÁÉÍÓÚ]/.test(texto);
     const tieneNumeros = /[0-9]/.test(texto);
-    const tieneCaracteresE = /[!@#$%^&*(),.?":{}|<>]/.test(texto);
+    const tieneCaracteresE = /[Ü∞:*±€£¥¢!@#$%^&*(),.?":{}|<>+-/]/.test(texto);
     if (tieneMayusculas || tieneAcentos || tieneNumeros || tieneCaracteresE) {
         alert("Por favor, ingrese solo letras minúsculas y sin acentos.");
         return false;
@@ -77,4 +77,11 @@ function mostrarTextoEncriptado(texto) {
     ig.style.display = "none";
     ng.style.display = "none";
     
+ 
+    const botonCopiar = document.querySelector(".copiar");
+    if (texto) {
+        botonCopiar.style.display = "block";
+    } else {
+        botonCopiar.style.display = "none";
+    }
 }

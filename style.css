@@ -111,6 +111,8 @@ textarea::placeholder {
   color: var(--color--blanco);
   margin-block-end: 1rem;
   margin-block-start: 1rem;
+  display: none;
+
 }
 
 .copiar:hover{
