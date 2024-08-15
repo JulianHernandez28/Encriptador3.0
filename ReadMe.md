@@ -12,17 +12,11 @@ La letra "a" es convertida para "ai"
 La letra "o" es convertida para "ober"
 
 La letra "u" es convertida para "ufat"
-
-Caracteristicas:
-
-Debe funcionar solo con letras minúsculas y sin acentos.
-
-No pueden ser utilizadas letras con acentos ni caracteres especiales.
-
-El boton copiar aparece solo cuando hay texto encriptado.
-
-Como máximo se permite ingresar 500 letras.
-
-Si el texto ingresado contiene caracteres especiales, números o mayúsculas se muestra una alerta donde dice que solo se puede ingresar letras minusculas y sin acentos.
+Caracteristicas
+Debe funcionar solo con letras minúsculas y sin acentos
+No pueden ser utilizadas letras con acentos ni caracteres especiales
+El boton copiar aparece solo cuando hay texto encriptado
+Como máximo se permite ingresar 500 letras
+Si el texto ingresado contiene caracteres especiales, números o mayúsculas se muestra una alerta donde dice que solo se puede ingresar letras minusculas y sin acentos
 
 ![Vista previa de la pagina web](assets/vistaprevia.png)
